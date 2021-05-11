@@ -32,10 +32,16 @@ class NewsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request)//L'étape 3 commence ici
     {
-        //
-    }
+        $data = [
+            'news'=>[
+                'title'=>$request->input('title'),
+                'content'=>$request->input('content'),
+            ],
+        ];
+        return view('news.result', $data);
+    }//Fin de ce qui était à saisir pour l'étape 3. 
 
     /**
      * Display the specified resource.
