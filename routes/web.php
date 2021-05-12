@@ -23,3 +23,4 @@ Route::get('/user/create', [UserController::class, 'create']);
 Route::post('/user', [UserController::class, 'store']);
 
 Route::get('/news/create', [NewsController::class, 'create']);
+Route::get('/news', [NewsController::class, 'store']);
